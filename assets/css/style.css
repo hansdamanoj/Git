@@ -3554,7 +3554,7 @@ input[type="checkbox"] {
 
 @media only screen and (min-width: 1500px) and (max-width: 1599px) {
   .menu-style-three .navigation-menu > ul > li, .menu-style-four .navigation-menu > ul > li {
-    padding-left: 22px;
+    /* padding-left: 22px; */
     padding-right: 22px;
   }
 }
