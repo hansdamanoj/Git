@@ -1,7 +1,7 @@
 <?php
 
-    $site_owners_email = 'contact@mrgeeks.net'; // Replace this with your own email address
-    $site_owners_name = 'Mr. Geeks'; // replace with your name
+    $site_owners_email = 'admin@gotogeeks.com.au'; // Replace this with your own email address
+    $site_owners_name = 'Go to Geeks'; // replace with your name
 	
 	$prep_name = $_POST['fname']?$_POST['fname']:''. " ". $_POST['lname']?$_POST['lname']:'';
 	$name = $_POST['name']?$_POST['name']:$prep_name;
@@ -66,7 +66,7 @@
 		
 		$mail->Send();
 		
-		header("Location: enquiry-success.php");
+		header("Location: thank-you.html");
 // 		echo '<div class="alert alert-success"  role="alert">Thank you. for getting in touch<br>We appriciate you contacting us.<br>We will get back in touch with you soon!<br>Have a great day!</div>';
 	} else {
 		// do nothing...
