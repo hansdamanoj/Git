@@ -65,10 +65,17 @@
 			$mail->AddAttachment( $_FILES['file']['tmp_name'], $_FILES['file']['name'] );
 		}
 		
-		$mail->Send();
+		// $mail->Send();
+
+		if($mail->Send()){
+			echo 'Thank you. for getting in touch. We appriciate you contacting us. We will get back in touch with you soon! Have a great day!';
+		}else{
+			echo 'Message could not be sent.';
+			echo 'Mailer Error: ' . $mail->ErrorInfo;
+		}
 		
 		// header("Location: thank-you.html");
-		echo 'Thank you. for getting in touch. We appriciate you contacting us. We will get back in touch with you soon! Have a great day!';
+		// echo 'Thank you. for getting in touch. We appriciate you contacting us. We will get back in touch with you soon! Have a great day!';
 	} else {
 		header("Location: thank-you.html");
 		// do nothing...
