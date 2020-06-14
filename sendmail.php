@@ -68,7 +68,7 @@
 		$mail->Send();
 		
 		// header("Location: thank-you.html");
-		echo 'Thank you. for getting in touch<br>We appriciate you contacting us. We will get back in touch with you soon! Have a great day!';
+		echo 'Thank you. for getting in touch. We appriciate you contacting us. We will get back in touch with you soon! Have a great day!';
 	} else {
 		header("Location: thank-you.html");
 		// do nothing...
