@@ -12,6 +12,7 @@
 	$email =  $_POST['email']?$_POST['email']:'';
 	$subject =  $_POST['subject']?$_POST['subject']:'';
 	$message =  $_POST['message']?$_POST['message']:'';
+	$inquiry =  $_POST['inquiry']?$_POST['inquiry']:'Contact Us';
 
     $isSubmitTypeAjax = true;
 // 	$isSubmitTypeAjax = filter_var( $_POST['submitType'], FILTER_SANITIZE_STRING );
@@ -58,7 +59,7 @@
 		$mail->AddAddress($site_owners_email, $site_owners_name);
 		$mail->IsHTML(true);
 		
-		$mail->Body = $nameText . $telText . $dateText . $timeText . $emailText . '<br/>' . $message . $footerText;
+		$mail->Body = $nameText . $telText . $dateText . $timeText . $enquiry . $emailText . '<br/>' . $message . $footerText;
 			
 		if ( isset( $_FILES['file'] ) && $_FILES['file']['error'] == UPLOAD_ERR_OK ) {
 			$mail->AddAttachment( $_FILES['file']['tmp_name'], $_FILES['file']['name'] );
@@ -69,6 +70,7 @@
 		header("Location: thank-you.html");
 // 		echo '<div class="alert alert-success"  role="alert">Thank you. for getting in touch<br>We appriciate you contacting us.<br>We will get back in touch with you soon!<br>Have a great day!</div>';
 	} else {
+		header("Location: thank-you.html");
 		// do nothing...
 	}
 
