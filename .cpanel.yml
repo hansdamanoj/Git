@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/uljpr84co8mq/public_html/
+    - export DEPLOYPATH=/home/h5mx6nuh47gv/public_html/gotogeeks.com.au/
     - /bin/cp -R * $DEPLOYPATH
